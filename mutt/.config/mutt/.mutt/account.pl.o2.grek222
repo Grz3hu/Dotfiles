@@ -1,0 +1,18 @@
+set imap_user = grek222@o2.pl
+set smtp_url = smtp://poczta.o2.pl:465/
+set from = grek222@o2.pl
+set realname = "Grzegorz_Swistak"
+set mbox_type = Maildir
+set sendmail = "/usr/bin/msmtp -a o2"
+set folder = "~/.Mail/o2"
+set spoolfile = "+INBOX"
+set record = /dev/null 
+set mbox = "+[o2].All Mail"
+set postponed="+[o2].Drafts"
+set header_cache=~/.mutt/cache/headers
+set message_cachedir=~/.mutt/cache/bodies
+set certificate_file=~/.mutt/certificates
+set ssl_starttls = yes
+set ssl_force_tls = yes
+
+mailboxes +INBOX

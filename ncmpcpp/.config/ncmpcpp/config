@@ -1,0 +1,3 @@
+mpd_host = pi4
+mpd_port = 6600
+

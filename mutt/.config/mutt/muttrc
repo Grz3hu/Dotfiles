@@ -1,0 +1,34 @@
+# Folder hooks
+folder-hook 'account.com.gmail.grzegorzpolskapl' 'source ~/.config/mutt/.mutt/account.com.gmail.grzegorzpolskapl'
+folder-hook 'account.pl.o2.grek222' 'source ~/.config/mutt/.mutt/account.pl.o2.grek222'
+
+# Default account
+source ~/.config/mutt/.mutt/account.pl.o2.grek222
+
+# Macros for switching accounts
+macro index <f3> '<sync-mailbox><enter-command>source ~/.config/mutt/.mutt/account.com.gmail.grzegorzpolskapl<enter><change-folder>!<enter>'
+macro index <f2> '<sync-mailbox><enter-command>source ~/.config/mutt/.mutt/account.pl.o2.grek222<enter><change-folder>!<enter>'
+
+#all seen
+macro index A "<tag-pattern>~N<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" 
+ 
+#Fetch mail shortcut
+bind index g noop
+bind index G last-entry
+bind index gg first-entry
+#source ~/.config/mutt/solarized256.muttrc
+
+set sidebar_visible
+set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
+set mail_check_stats
+
+bind index,pager \CP sidebar-prev       # Ctrl-Shift-P - Previous Mailbox
+bind index,pager \CN sidebar-next       # Ctrl-Shift-N - Next Mailbox
+bind index,pager \CO sidebar-open       # Ctrl-Shift-O - Open Highlighted Mailbox
+bind index,pager B sidebar-toggle-visible 
+set sidebar_width = 14                  # Plenty of space
+set editor=vim
+bind index \Cu half-up
+bind pager \Cu half-up
+bind index \Cd half-down
+bind pager \Cd half-down

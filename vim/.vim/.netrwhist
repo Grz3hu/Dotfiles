@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='ftp://swistaka@wn01.webd.pl/www/kswistak.com.pl/.well-known/'
+let g:netrw_dirhist_3='ftp://swistaka@wn01.webd.pl/www/kswistak.com.pl/'
+let g:netrw_dirhist_2='ftp://swistaka@wn01.webd.pl/www/'
+let g:netrw_dirhist_1='ftp://swistaka@wn01.webd.pl/'

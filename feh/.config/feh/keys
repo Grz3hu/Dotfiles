@@ -1,0 +1,12 @@
+close C-w
+
+zoom_in plus
+
+zoom_out minus
+
+reload_image
+orient_1 r
+
+toggle_exif
+orient_3 e
+
