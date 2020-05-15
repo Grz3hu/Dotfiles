@@ -161,7 +161,7 @@ export PATH=~/Documents/Projects/Bash/swap:$PATH
 export PATH=~/Downloads/cava:$PATH
 export PATH=~/Documents/blocklist:$PATH
 export PATH=~/Documents/tor-browser_en-US:$PATH
-export TERM=linux
+export TERM=xterm
 
 bind -x '"\C-l": clear'
 
