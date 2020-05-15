@@ -10,6 +10,7 @@ let g:rainbow_active = 1
 call plug#begin()
 Plug 'preservim/nerdtree' 
 "Plug 'wlangstroth/vim-racket'
+" Plug 'vim-airline/vim-airline'
 Plug 'jpalardy/vim-slime'
 Plug 'oblitum/rainbow'
 Plug 'lilydjwg/colorizer'
@@ -77,5 +78,3 @@ inoremap {;<CR> {<CR>};<ESC>O
 
 map <C-n> :NERDTreeToggle<CR>
 
-"colorscheme solarized
-"set background=dark

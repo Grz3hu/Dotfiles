@@ -56,12 +56,7 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-fi
-unset color_prompt force_color_prompt
+export PS1="[\[\e[34m\]\u\[\e[m\]\[\e[30m\]@\[\e[m\]\[\e[34m\]\h\[\e[m\]\[\e[36m\]\w\[\e[m\]][\[\e[34m\]\A\[\e[m\]]\[\e[36m\]\\$\[\e[m\] "
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
@@ -75,7 +70,7 @@ esac
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls'
+    alias ls='colorls'
     alias dir='dir --color=auto'
     alias vdir='vdir --color=auto'
 
@@ -88,8 +83,8 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-alias ll='ls -al'
-alias la='ls -A'
+alias ll='colorls -al'
+alias la='colorls -A'
 alias l='ls -CF'
 
 # Add an "alert" alias for long running commands.  Use like so:
@@ -143,6 +138,9 @@ alias gcc='gcc -xc -std=c11 -Wall -Wextra -Werror '
 alias search='ddgr --reg=pl-pl --num=7 -x'
 alias install='sudo apt-get install'
 alias off='shutdown now'
+#alias spt='(spotify &) && spt'
+alias spt='trap "killall spotifyd" EXIT && (spotifyd --backend alsa --no-daemon -u 11126552801 -p chujkurwa123 1> /dev/null &) && spt'
+#alias ht='sudo vim /etc/hosts'
 
 export EDITOR="vim"
 export VISUAL="vim"
@@ -156,12 +154,13 @@ powerline-daemon -q
 . /usr/share/powerline/bindings/bash/powerline.sh
  fi
 
+export PATH=~/Downloads/java/jdk-12.0.2/bin:$PATH
+export PATH=~/Downloads/clion-2019.3.1/bin:$PATH
 export PATH=~/Documents/Projects/Bash/:$PATH
 export PATH=~/Documents/Projects/Bash/swap:$PATH
 export PATH=~/Downloads/cava:$PATH
 export PATH=~/Documents/blocklist:$PATH
 export PATH=~/Documents/tor-browser_en-US:$PATH
-export TERM=linux
 
 bind -x '"\C-l": clear'
 

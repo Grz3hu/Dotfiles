@@ -71,7 +71,7 @@
 ; source = /squeezelite-AA:BB:CC:DD:EE:FF
 
 ; method = portaudio
-; source = auto
+; source = /dev/snd
 
 
 [output]
