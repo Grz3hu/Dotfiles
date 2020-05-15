@@ -70,7 +70,7 @@ esac
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='colorls'
+    alias ls='ls'
     alias dir='dir --color=auto'
     alias vdir='vdir --color=auto'
 
@@ -83,8 +83,8 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-alias ll='colorls -al'
-alias la='colorls -A'
+alias ll='ls -al'
+alias la='ls -A'
 alias l='ls -CF'
 
 # Add an "alert" alias for long running commands.  Use like so:
@@ -111,20 +111,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-
-# Import colorscheme from 'wal' asynchronously
-# &   # Run the process in the background.
-# ( ) # Hide shell job control messages.
-(cat ~/.cache/wal/sequences &) && clear
-
-# Alternative (blocks terminal for 0-3ms)
-#cat ~/.cache/wal/sequences
-
-# To add support for TTYs this line can be optionally added.
-source ~/.cache/wal/colors-tty.sh
-
 #my aliases
-alias g-c-c='env XDG_CURRENT_DESKTOP=GNOME gnome-control-center'
 alias cls='clear'
 alias tsk='task list'
 alias colortest='colortest-16b'
@@ -133,34 +120,18 @@ alias wroclaw='curl wttr.in/~wroclaw?format=2'
 alias czestochowa='curl wttr.in/~czestochowa?format=2'
 alias mutt='neomutt'
 alias logout='sudo pkill -u grzes'
-alias firefox='firefox -search'
-alias gcc='gcc -xc -std=c11 -Wall -Wextra -Werror '
-alias search='ddgr --reg=pl-pl --num=7 -x'
 alias install='sudo apt-get install'
 alias off='shutdown now'
-#alias spt='(spotify &) && spt'
-alias spt='trap "killall spotifyd" EXIT && (spotifyd --backend alsa --no-daemon -u 11126552801 -p chujkurwa123 1> /dev/null &) && spt'
-#alias ht='sudo vim /etc/hosts'
+
+#docker
+alias dcl='docker container list'
+alias dcla='docker container list -a'
+alias dil='docker image list'
+alias dcr='docker container rm'
 
 export EDITOR="vim"
 export VISUAL="vim"
 set -o vi #vim bindings
-
-#powerline
-if [ -f `which powerline-daemon` ]; then
-powerline-daemon -q
- POWERLINE_BASH_CONTINUATION=1
- POWERLINE_BASH_SELECT=1
-. /usr/share/powerline/bindings/bash/powerline.sh
- fi
-
-export PATH=~/Downloads/java/jdk-12.0.2/bin:$PATH
-export PATH=~/Downloads/clion-2019.3.1/bin:$PATH
-export PATH=~/Documents/Projects/Bash/:$PATH
-export PATH=~/Documents/Projects/Bash/swap:$PATH
-export PATH=~/Downloads/cava:$PATH
-export PATH=~/Documents/blocklist:$PATH
-export PATH=~/Documents/tor-browser_en-US:$PATH
 export TERM=xterm
 
 bind -x '"\C-l": clear'
