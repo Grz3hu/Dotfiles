@@ -34,3 +34,8 @@ def_key "J"
     move_sort_order_down
 def_key "K"
     move_sort_order_up
+
+#More yt like binds
+def_key "space"
+	pause
+
