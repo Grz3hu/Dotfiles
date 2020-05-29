@@ -5,7 +5,7 @@ autoload -U colors && colors
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
 #Load pywal colors
-(cat ~/.cache/wal/sequences &) && clear
+# (cat ~/.cache/wal/sequences &) && clear
 
 # History in cache directory:
 HISTSIZE=10000
@@ -78,6 +78,7 @@ bindkey '^e' edit-command-line
 source .config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 
 #My aliases
+alias vim="nvim"
 alias jd="cowsay jebać disa"
 alias cat="bat -p"
 alias g-c-c='env XDG_CURRENT_DESKTOP=GNOME gnome-control-center'
@@ -125,14 +126,14 @@ export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
 
 #Program install sugestions
-. /etc/zsh_command_not_found
+# . /etc/zsh_command_not_found
 
-#Powerlever prompt
-source ~/.config/zsh/plugins/powerlevel9k/powerlevel9k.zsh-theme
-
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context ssh dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(root_indicator background_jobs status vi_mode)
-
+##Powerlever prompt
+#source ~/.config/zsh/plugins/powerlevel9k/powerlevel9k.zsh-theme
+#
+#POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context ssh dir vcs)
+#POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(root_indicator background_jobs status vi_mode)
+#
 #Fuzzy file finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

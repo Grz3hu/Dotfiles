@@ -10,7 +10,8 @@ let g:rainbow_active = 1
 call plug#begin()
 Plug 'preservim/nerdtree' 
 "Plug 'wlangstroth/vim-racket'
-" Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'altercation/vim-colors-solarized'
 Plug 'jpalardy/vim-slime'
 Plug 'oblitum/rainbow'
 Plug 'lilydjwg/colorizer'
@@ -28,7 +29,7 @@ Plug 'Shougo/deoplete.nvim'
 Plug 'OmniSharp/omnisharp-vim'
 call plug#end()
 
-let g:deoplete#enable_at_startup = 1
+" let g:deoplete#enable_at_startup = 1
 
 autocmd filetype python nnoremap <S-F10> :w <bar> exec '!clear && python3.8 '.shellescape('%')<CR>
 autocmd filetype c nnoremap <S-F10> :w <bar> exec '!clear && gcc '.shellescape('%').' -o '.shellescape('%:r').' && echo Compilation complete && ./'.shellescape('%:r')<CR>
@@ -40,15 +41,15 @@ autocmd filetype tex nnoremap <S-F10> :w <bar> exec '!clear && pdflatex %' <CR>
 
 
 "binds"
-execute "set <A-1>=\e1"
-execute "set <A-2>=\e2"
-execute "set <A-3>=\e3"
-execute "set <A-4>=\e4"
-execute "set <A-5>=\e5"
-execute "set <A-6>=\e6"
-execute "set <A-7>=\e7"
-execute "set <A-8>=\e8"
-execute "set <A-9>=\e9"
+" execute "set <A-1>=\e1"
+" execute "set <A-2>=\e2"
+" execute "set <A-3>=\e3"
+" execute "set <A-4>=\e4"
+" execute "set <A-5>=\e5"
+" execute "set <A-6>=\e6"
+" execute "set <A-7>=\e7"
+" execute "set <A-8>=\e8"
+" execute "set <A-9>=\e9"
 nnoremap <silent> <A-1> :execute 'silent! 1tabn'<CR>
 nnoremap <silent> <A-2> :execute 'silent! 2tabn'<CR>
 nnoremap <silent> <A-3> :execute 'silent! 3tabn'<CR>
@@ -59,8 +60,8 @@ nnoremap <silent> <A-7> :execute 'silent! 7tabn'<CR>
 nnoremap <silent> <A-8> :execute 'silent! 8tabn'<CR>
 nnoremap <silent> <A-9> :execute 'silent! 9tabn'<CR>
 
-execute "set <A-h>=\eh"
-execute "set <A-l>=\el"
+" execute "set <A-h>=\eh"
+" execute "set <A-l>=\el"
 nnoremap <silent> <A-h> :execute 'silent! tabp'<CR>
 nnoremap <silent> <A-l> :execute 'silent! tabn'<CR>
 nnoremap <silent> <C-T> :execute 'silent! tabe '<CR>
@@ -78,3 +79,6 @@ inoremap {;<CR> {<CR>};<ESC>O
 
 map <C-n> :NERDTreeToggle<CR>
 
+syntax enable
+set background=dark
+colorscheme solarized
