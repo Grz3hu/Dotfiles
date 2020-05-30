@@ -11,7 +11,8 @@ call plug#begin()
 Plug 'preservim/nerdtree' 
 "Plug 'wlangstroth/vim-racket'
 Plug 'vim-airline/vim-airline'
-Plug 'altercation/vim-colors-solarized'
+" Plug 'altercation/vim-colors-solarized'
+Plug 'arcticicestudio/nord-vim'
 Plug 'jpalardy/vim-slime'
 Plug 'oblitum/rainbow'
 Plug 'lilydjwg/colorizer'
@@ -81,4 +82,4 @@ map <C-n> :NERDTreeToggle<CR>
 
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme nord

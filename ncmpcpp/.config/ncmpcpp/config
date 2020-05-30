@@ -1,8 +1,8 @@
 mpd_host = pi4
 mpd_port = 6600
-visualizer_fifo_path = "/dev/snd"
-visualizer_output_name = "my_fifo"
-visualizer_sync_interval = "30" 
-visualizer_in_stereo = "yes"
-visualizer_type = "spectrum"
-visualizer_look = "+|"
+/* visualizer_fifo_path = "/dev/snd" */
+/* visualizer_output_name = "my_fifo" */
+/* visualizer_sync_interval = "30" */ 
+/* visualizer_in_stereo = "yes" */
+/* visualizer_type = "spectrum" */
+/* visualizer_look = "+|" */

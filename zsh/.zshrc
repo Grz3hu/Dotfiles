@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Luke's config for the Zoomer Shell
 # Enable colors and change prompt:
 
@@ -131,8 +138,8 @@ export LESS_TERMCAP_us=$'\e[1;4;31m'
 ##Powerlever prompt
 #source ~/.config/zsh/plugins/powerlevel9k/powerlevel9k.zsh-theme
 #
-#POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context ssh dir vcs)
-#POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(root_indicator background_jobs status vi_mode)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context ssh dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(root_indicator background_jobs vi_mode)
 #
 #Fuzzy file finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -158,3 +165,7 @@ alias r="ranger-cd"
 if [[ -r /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh ]]; then
     source /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh
 fi
+source ~/Other/powerlevel10k/powerlevel10k.zsh-theme
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
