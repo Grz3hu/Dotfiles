@@ -1,6 +1,3 @@
-!ls
-ls
-rename IMG_20191024_152542.jpg
 rename mr.robot.s04e10.1080p.web.h264-trump.txt
 bulkrename
 shell wal -i beach.jpg 
@@ -24,7 +21,6 @@ find matrix
 search matrix
 search matr
 rename Algebra liniowa
-bulkrename 
 rename among_trees.jpg
 rename small_memory.jpg
 search deer
@@ -48,3 +44,7 @@ v
 delete
 rename mopidy
 wq
+set preview_images true
+set preview_images_method w3m
+rename date
+bulkrename 
