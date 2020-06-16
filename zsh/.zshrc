@@ -22,9 +22,10 @@ setopt share_history
 
 # Basic auto/tab complete:
 autoload -U compinit && compinit
+_comp_options+=(globdots)		# Include hidden files.
+setopt globdots
 zstyle ':completion:*' menu select
 zmodload zsh/complist
-_comp_options+=(globdots)		# Include hidden files.
 
 #Auto complete with case insensivity
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
