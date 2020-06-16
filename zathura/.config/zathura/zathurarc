@@ -1,7 +1,6 @@
 set recolor true
 set selection-clipboard clipboard
-set default-bg "#03142C"
-set inputbar-bg "#03142C"
-set statusbar-bg "#03142C"
-set tabbar-bg "#03142C"
-set recolor-lightcolor "#03142C"
+set default-bg "#2e3440"
+set inputbar-bg "#3b4252"
+set statusbar-bg "#3b4252"
+set recolor-lightcolor "#2e3440"

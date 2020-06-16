@@ -1,5 +1,3 @@
-rename mr.robot.s04e10.1080p.web.h264-trump.txt
-bulkrename
 shell wal -i beach.jpg 
 shell wal -i crimson.png 
 shell wal -i wallhaven-g887w7.jpg 
@@ -41,10 +39,12 @@ v
 :set show_hidden true
 :show_hidden true
 :show_hidden
-delete
 rename mopidy
 wq
 set preview_images true
 set preview_images_method w3m
 rename date
 bulkrename 
+delete
+search ear
+search italy

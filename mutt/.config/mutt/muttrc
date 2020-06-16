@@ -16,19 +16,129 @@ macro index A "<tag-pattern>~N<enter><tag-prefix><clear-flag>N<untag-pattern>.<e
 bind index g noop
 bind index G last-entry
 bind index gg first-entry
-#source ~/.config/mutt/solarized256.muttrc
 
-set sidebar_visible
+# set sidebar_visible
 set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
 set mail_check_stats
 
-bind index,pager \CP sidebar-prev       # Ctrl-Shift-P - Previous Mailbox
-bind index,pager \CN sidebar-next       # Ctrl-Shift-N - Next Mailbox
+bind index,pager \CK sidebar-prev       # Ctrl-Shift-P - Previous Mailbox
+bind index,pager \CJ sidebar-next       # Ctrl-Shift-N - Next Mailbox
 bind index,pager \CO sidebar-open       # Ctrl-Shift-O - Open Highlighted Mailbox
-bind index,pager B sidebar-toggle-visible 
+bind index,pager \Cn sidebar-toggle-visible 
 set sidebar_width = 14                  # Plenty of space
-set editor=vim
-bind index \Cu half-up
-bind pager \Cu half-up
-bind index \Cd half-down
-bind pager \Cd half-down
+set editor=nvim
+bind index,pager \Cu half-up
+bind index,pager \Cd half-down
+
+set check_mbox_size
+set wait_key = no
+set mbox_type= Maildir
+set maildir_check_cur
+set timeout = 0
+set mail_check = 5
+set imap_keepalive = 300
+set net_inc=5
+set delete
+set quit
+set thorough_search
+unset confirmappend
+unset move
+set mark_old
+set beep_new
+set check_new
+# Pager settings
+#
+ignore *
+unignore from: to:
+unhdr_order *
+hdr_order from: to:
+alternative_order text/plain text/html
+# when composing emails, use this command to get addresses from
+# the addressbook with khard first, and everything else from mu index
+# set query_command = "( khard email --parsable '%s' | sed -n '1!p'; mu cfind --format=mutt-ab '%s' )"
+set pager_index_lines = 8
+set pager_context = 3
+set pager_stop
+set menu_scroll
+unset tilde
+unset markers
+mime_lookup application/octet-stream
+auto_view text/html
+
+###############
+# Index settings
+#
+# unset mark_old           # read/new is good enough for me
+#set pipe_decode          # strip headers and eval mimes when piping
+#set thorough_search      # strip headers and eval mimes before searching
+#set header_cache= "~/.neomutt/cache/headers"
+#set message_cachedir = "~/.neomutt/cache/bodies"
+#set certificate_file = "~/mail/certs/Certificates.cer"
+#set tmpdir = "~/.neomutt/tmp"
+#set mailcap_path = "~/.config/neomutt/mailcap"
+
+###############
+# Message composition settings
+#
+# compose View Options
+set envelope_from                    # which from?
+set edit_headers                     # show headers when composing
+set askcc                            # ask for CC:
+set fcc_attach                       # save attachments with the body
+set forward_format = "Fwd: %s"       # format of subject when forwarding
+set forward_decode                   # decode when forwarding
+set attribution = "On %d, %n wrote:" # format of quoting header
+set reply_to                         # reply to Reply to: field
+set reverse_name                     # reply as whomever it was to
+set include                          # include message in replies
+set forward_quote                    # include message in forwards
+set editor = "nvim -c 'set spell' -c 'set textwidth=72' -c 'set wrap' -c 'set nocp' -c '?^$'"
+set text_flowed
+unset sig_dashes                     # no dashes before sig
+unset mime_forward                   # forward attachments as part of body
+
+################
+## GnuPG
+##
+#set pgp_sign_as = 85555E72BD86438714BF6B6C208D9F3269F9FC92
+#set crypt_use_gpgme = yes
+#set crypt_autosign = no
+#set crypt_verify_sig = yes
+#set crypt_replysign = yes
+#set crypt_replyencrypt = yes
+#set crypt_replysignencrypted = yes
+
+###############
+# Sidebar
+#
+set sidebar_new_mail_only
+set sidebar_visible                         # Make the Sidebar visible by default
+set sidebar_divider_char = '│'              # Pretty line-drawing character
+set mail_check_stats
+set sidebar_short_path                      # Shorten mailbox names
+set sidebar_delim_chars="/"                 # Delete everything up to the last / character
+set sidebar_format ="%B%?F? [%F]?%* %?N?%N/?%S"
+# set sidebar_blacklist="+[Gmail]/All Mail"
+# sidebar_whitelist = "Inbox" "=[Gmail]/Starred"
+##############
+# Bindings
+#
+# opening urls with urlscan
+macro pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+# Sync all email
+macro index,pager O "<shell-escape>mbsync -V -a<enter>" "run mbsync to sync all mail"
+macro index,pager A \
+"<save-message>+gmail/archive<enter>"  \
+  "move message to the archive"
+bind index,pager J sidebar-prev       # Ctrl-Shift-J - Previous Mailbox
+bind index,pager K sidebar-next       # Ctrl-Shift-K - Next Mailbox
+bind index,pager L sidebar-open       # Ctrl-Shift-L - Open Highlighted Mailbox
+macro attach 'V' "<pipe-entry>iconv -c --to-code=UTF8 > ~/.cache/mutt/mail.html<enter><shell-escape>/usr/local/bin/browsh ~/.cache/mutt/mail.html<enter>"
+bind  index,pager s  flag-message #Star a message
+folder-hook "+[Gmail]/Starred" bind index,pager y flag-message #"Toggle star"
+macro index,pager i  "<save-message>=[Gmail]/Important<enter><enter>" "Mark as important"
+
+source ~/.config/mutt/nordpowerline
+source ~/.config/mutt/powerline
+
+macro index A "<tag-pattern>~N<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" 
