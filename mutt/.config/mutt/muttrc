@@ -13,6 +13,7 @@ macro index <f2> '<sync-mailbox><enter-command>source ~/.config/mutt/.mutt/accou
 macro index A "<tag-pattern>~N<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" 
  
 #Fetch mail shortcut
+bind index,pager \CR imap-fetch-mail
 bind index g noop
 bind index G last-entry
 bind index gg first-entry
@@ -111,8 +112,6 @@ unset mime_forward                   # forward attachments as part of body
 ###############
 # Sidebar
 #
-set sidebar_new_mail_only
-set sidebar_visible                         # Make the Sidebar visible by default
 set sidebar_divider_char = '│'              # Pretty line-drawing character
 set mail_check_stats
 set sidebar_short_path                      # Shorten mailbox names

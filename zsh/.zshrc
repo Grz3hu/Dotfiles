@@ -17,6 +17,7 @@ PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magent
 HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE="$HOME/.cache/zsh/history"
+ZSH_AUTOSUGGEST_USE_ASYNC=1
 #One history for terminals
 setopt share_history
 
@@ -44,7 +45,16 @@ bindkey '^R' history-incremental-search-backward
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
-bindkey '^[l' autosuggest-accept
+bindkey '^[l' autosuggest-accept 
+bindkey '^[L' forward-word
+# Load aliases and shortcuts if existent.
+[ -f "$HOME/.config/exportrc" ] && source "$HOME/.config/exportrc"
+[ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
+[ -f "$HOME/.config/functionrc" ] && source "$HOME/.config/functionrc"
+#Fuzzy file finder
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
  # Change cursor shape for different vi modes.
 function zle-keymap-select {
@@ -64,42 +74,14 @@ zle-line-init() {
     echo -ne "\e[5 q"
 }
 zle -N zle-line-init
-echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
-# Load aliases and shortcuts if existent.
-[ -f "$HOME/.config/exportrc" ] && source "$HOME/.config/exportrc"
-[ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
-#Fuzzy file finder
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-function fd() {
-	cd $(find ~ -type d 2>/dev/null | fzf -i)
-}
-function r {
-    local IFS=$'\t\n'
-    local tempfile="$(mktemp -t tmp.XXXXXX)"
-    local ranger_cmd=(
-        command
-        ranger
-        --cmd="map q chain shell echo %d > "$tempfile"; quitall"
-    )
-
-    ${ranger_cmd[@]} "$@"
-    if [[ -f "$tempfile" ]] && [[ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]]; then
-        cd -- "$(cat "$tempfile")" || return
-    fi
-    command rm -f -- "$tempfile" 2>/dev/null
-}
-
+source /usr/share/autojump/autojump.zsh
 source ~/.zplug/init.zsh
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "ninrod/pass-zsh-completion"
 zplug "zsh-users/zsh-autosuggestions"
+# zplug "softmoth/zsh-vim-mode"
 zplug romkatv/powerlevel10k, as:theme, depth:1
 zplug load
-
-ZSH_AUTOSUGGEST_USE_ASYNC=1
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

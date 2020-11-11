@@ -1,16 +1,3 @@
-shell wal -i beach.jpg 
-shell wal -i crimson.png 
-shell wal -i wallhaven-g887w7.jpg 
-shell wal -i wallhaven-g887w7.jpg
-shell wal -i simplicity.jpg
-shell wal -i wave.png 
-shell wal -i firewatch.png 
-mkdir
-mkdir polybar_themes
-shell git clone https://github.com/adi1090x/
-cd polybar_themes/
-sea
-shell git clone https://github.com/adi1090x/polybar-themes/tree/master/polybar-6
 find ni
 find beaj
 find St
@@ -32,10 +19,8 @@ mkdir emoji
 mkdir emoji_script
 shell p
 open_with feh
-open_with 
 rename image.png
 v
-
 :set show_hidden true
 :show_hidden true
 :show_hidden
@@ -45,6 +30,21 @@ set preview_images true
 set preview_images_method w3m
 rename date
 bulkrename 
-delete
 search ear
 search italy
+unzip
+open_with 
+
+mv nordic.jpg
+shell mv nordicjpg nordic.jpg
+rename init.vim
+
+search pysz
+rename ace.mkv
+delete
+rename ankieta.pdf
+rename przetwarzanie.pdf
+rename wniosek.pdf
+mkdir Inne
+search Pro
+rename simonstalenhag_0.jpg
