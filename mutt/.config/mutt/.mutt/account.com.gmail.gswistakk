@@ -1,0 +1,20 @@
+set imap_user = gswistakk@gmail.com
+set smtp_url = smtp://gswistakk@gmail.com@smtp.gmail.com:587
+set from = gswistakk@gmail.com
+set realname = "Grzegorz Swistak"
+set mbox_type = Maildir
+set sendmail = "/usr/bin/msmtp -a gmail"
+set folder = "~/.Mail/gswistakk"
+set spoolfile = "+INBOX"
+set record = /dev/null
+set mbox = "+[Gmail].All Mail"
+set postponed="+[Gmail].Drafts"
+set header_cache=~/.mutt/cache/headers
+set message_cachedir=~/.mutt/cache/bodies
+set certificate_file=~/.mutt/certificates
+set ssl_starttls = yes
+set ssl_force_tls = yes
+
+mailboxes +INBOX
+
+

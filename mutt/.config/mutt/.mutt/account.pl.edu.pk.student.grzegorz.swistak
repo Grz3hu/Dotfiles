@@ -1,0 +1,18 @@
+set imap_user = grzegorz.swistak@student.pk.edu.pl
+set smtp_url = smtp.office365.com:587/
+set from = grzegorz.swistak@student.pk.edu.pl
+set realname = "Grzegorz_Swistak"
+set mbox_type = Maildir
+set sendmail = "/usr/bin/msmtp -a outlook"
+set folder = "~/.Mail/outlook"
+set spoolfile = "+INBOX"
+set record = /dev/null 
+set mbox = "+[outlook].All Mail"
+set postponed="+[outlook].Drafts"
+set header_cache=~/.mutt/cache/headers
+set message_cachedir=~/.mutt/cache/bodies
+set certificate_file=~/.mutt/certificates
+set ssl_starttls = yes
+set ssl_force_tls = yes
+
+mailboxes +INBOX

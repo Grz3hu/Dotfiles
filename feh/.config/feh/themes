@@ -1,2 +1,2 @@
-feh -. -B white -g 1024x576
+feh --edit -. -B white -g 1024x576
 qr 

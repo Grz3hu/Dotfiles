@@ -1,0 +1,3 @@
+image/*; feh %s
+text/html; brave-bin %s
+application/pdf; zathura %s

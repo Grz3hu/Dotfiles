@@ -1,0 +1,34 @@
+#My aliases
+alias vim="nvim"
+alias tabst="tabbed -cr 2 st -w '' -g 908x532"
+alias r="ranger"
+alias tr="trans"
+alias jd="cowsay jebać disa"
+alias cat="bat -p"
+alias g-c-c='env XDG_CURRENT_DESKTOP=GNOME gnome-control-center'
+alias castnow='castnow --address 192.168.1.76'
+alias cls='clear'
+alias tsk='task list'
+alias colortest='colortest-16b'
+alias starwars='telnet towel.blinkenlights.nl'
+alias wroclaw='curl "wttr.in/~wroclaw?format=2"'
+alias czestochowa='curl "wttr.in/~czestochowa?format=2"'
+alias mutt='neomutt'
+alias myip='curl https://ipinfo.io/ip'
+alias logout='sudo pkill -u grzes'
+alias firefox='firefox -search'
+alias calc='python3 -ic "from math import *"'
+alias grep='grep --color=auto'
+# alias gcc='gcc -xc -std=c11 -Wall -Wextra -Werror '
+alias ls='ls --color=auto --group-directories-first'
+alias l='ls --color=auto --group-directories-first'
+alias ll='ls -lh'
+alias la='ls -A'
+alias dcl='docker container ls'
+alias dcla='docker container ls -a'
+alias dcr='docker container rm'
+alias cp='cp -v'
+alias mv='mv -v'
+alias rm='rm -v'
+
+# alias pass='pass -c'

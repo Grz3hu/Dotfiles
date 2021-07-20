@@ -1,0 +1,265 @@
+#define normcolor0  #0C0C0C
+#define normcolor1  #767676
+#define normcolor2 #F2F2F2
+#define normcolor3 #CCCCCC
+#define normcolor4 #13A10E
+#define normcolor5 #3A96DD
+#define normcolor6 #881798
+#define normcolor7 #0037DA
+#define normcolor8 #61D6D6
+#define normcolor9 #16C60C
+#define normcolor10 #3B78FF
+#define normcolor11 #E74856
+#define normcolor12 #C50F1F
+#define normcolor13 #F9F1A5
+#define normcolor14 #C19C00
+#define normcolor15 #B4009E
+#define normcolorbg #0C0C0C
+#define normcolorfg #CCCCCC
+
+!gruvbox
+#define gruvbox0 #1d2021
+#define gruvbox1 #cc241d
+#define gruvbox2 #98971a
+#define gruvbox3 #d79921
+#define gruvbox4 #458588
+#define gruvbox5 #b16286
+#define gruvbox6 #689d6a
+#define gruvbox7 #a89984
+#define gruvbox8 #928374
+#define gruvbox9 #fb4934
+#define gruvbox10 #b8bb26
+#define gruvbox11 #fabd2f
+#define gruvbox12 #83a598
+#define gruvbox13 #d3869b
+#define gruvbox14 #8ec07c
+#define gruvbox15 #ebdbb2
+#define gruvboxbg #282828
+#define gruvboxfg #ebdbb2
+
+
+!gruvbox light
+#define gruvbox_light0  #fdf4c1
+#define gruvbox_light1  #cc241d
+#define gruvbox_light2  #98971a
+#define gruvbox_light3  #d79921
+#define gruvbox_light4  #458588
+#define gruvbox_light5  #b16286
+#define gruvbox_light6  #689d6a
+#define gruvbox_light7  #7c6f64
+#define gruvbox_light8  #928374
+#define gruvbox_light9  #9d0006
+#define gruvbox_light10 #79740e
+#define gruvbox_light11 #b57614
+#define gruvbox_light12 #076678
+#define gruvbox_light13 #8f3f71
+#define gruvbox_light14 #427b58
+#define gruvbox_light15 #3c3836
+#define gruvbox_lightbg #f2e5bc
+#define gruvbox_lightfg #3c3836
+! hard contrast: *background: #f9f5d7
+! soft contrast: *background: #f2e5bc
+
+!nord
+#define nord0 #3B4252
+#define nord1 #BF616A
+#define nord2 #A3BE8C
+#define nord3 #EBCB8B
+#define nord4 #81A1C1
+#define nord5 #B48EAD
+#define nord6 #88C0D0
+#define nord7 #E5E9F0
+#define nord8 #4C566A
+#define nord9 #BF616A
+#define nord10 #A3BE8C
+#define nord11 #EBCB8B
+#define nord12 #81A1C1
+#define nord13 #B48EAD
+#define nord14 #8FBCBB
+#define nord15 #ECEFF4
+#define nordbg #2e3440
+#define nordfg #d8dee9
+
+!dracula
+#define dracula0 #000000
+#define dracula1 #ff5555
+#define dracula2 #50fa7b
+#define dracula3 #f1fa8c
+#define dracula4 #bd93f9
+#define dracula5 #ff79c6
+#define dracula6 #8be9fd
+#define dracula7 #bbbbbb
+#define dracula8 #44475a
+#define dracula9 #ff5555
+#define dracula10 #50fa7b
+#define dracula11 #f1fa8c
+#define dracula12 #bd93f9
+#define dracula13 #ff79c6
+#define dracula14 #8be9fd
+#define dracula15 #ffffff
+#define draculabg #282a36
+#define draculafg #f8f8f2
+
+!solarized
+#define solarized0 #073642
+#define solarized1 #dc322f
+#define solarized2 #859900
+#define solarized3 #b58900
+#define solarized4 #268bd2
+#define solarized5 #d33683
+#define solarized6 #2aa198
+#define solarized7 #eee8d5
+#define solarized8 #002b36
+#define solarized9 #cb4b16
+#define solarized10 #586e75
+#define solarized11 #657b83
+#define solarized12 #839496
+#define solarized13 #6c71c4
+#define solarized14 #93a1a1
+#define solarized15 #fdf6e3
+#define solarizedbg #073642
+#define solarizedfg #fdf6e3
+
+!spaceduck
+#define spaceduck0 #000000
+#define spaceduck1 #e33400
+#define spaceduck2 #5ccc96
+#define spaceduck3 #b3a1e6
+#define spaceduck4 #00a3cc
+#define spaceduck5 #f2ce00
+#define spaceduck6 #7a5ccc
+#define spaceduck7 #686f9a
+#define spaceduck8 #686f9a
+#define spaceduck9 #e33400
+#define spaceduck10 #5ccc96
+#define spaceduck11 #b3a1e6
+#define spaceduck12 #00a3cc
+#define spaceduck13 #f2ce00
+#define spaceduck14 #7a5ccc
+#define spaceduck15 #f0f1ce
+#define spaceduckbg #0f111b
+#define spaceduckfg #ecf0c1
+
+
+!ASSIGNING
+#define ccolor0  	gruvbox0 
+#define ccolor1  	gruvbox1 
+#define ccolor2  	gruvbox2 
+#define ccolor3  	gruvbox3 
+#define ccolor4  	gruvbox4 
+#define ccolor5  	gruvbox5 
+#define ccolor6  	gruvbox6 
+#define ccolor7  	gruvbox7 
+#define ccolor8  	gruvbox8 
+#define ccolor9  	gruvbox9 
+#define ccolor10 	gruvbox10
+#define ccolor11 	gruvbox11
+#define ccolor12 	gruvbox12
+#define ccolor13 	gruvbox13
+#define ccolor14 	gruvbox14
+#define ccolor15 	gruvbox15
+#define cbackground 	gruvboxbg
+#define cforeground 	gruvboxfg
+
+!
+!    _                   ____      _
+!   / \   _ __  _ __    / ___|___ | | ___  _   _ _ __ ___
+!  / _ \ | ._ \| ._ \  | |   / _ \| |/ _ \| | | | .__/ __|
+! / ___ \| |_) | |_) | | |__| (_) | | (_) | |_| | |  \__ \
+!/_/   \_\ .__/| .__/   \____\___/|_|\___/ \__,_|_|  |___/
+!        |_|   |_|
+!
+!
+
+!dwm
+dwm.normbgcolor: cbackground
+dwm.normbordercolor: ccolor0
+dwm.normfgcolor: #bbbbbb
+!dwm.normfgcolor: cforeground
+dwm.selbordercolor: ccolor12
+dwm.selbgcolor: cbackground
+dwm.selfgcolor: ccolor10
+dwm.actbordercolor: ccolor0
+dwm.actbgcolor: cbackground
+dwm.actfgcolor: ccolor14
+
+!statusbar
+BARCOLOR0: ccolor10
+BARCOLOR1: ccolor9
+BARCOLOR2: ccolor12
+BARCOLOR3: ccolor11
+BARCOLOR4: ccolor10
+BARCOLOR5: ccolor4
+BARCOLOR6: ccolor6
+BARCOLOR7: ccolor5
+
+!st
+st.color0:  ccolor0
+st.color1:  ccolor1
+st.color2:  ccolor2
+st.color3:  ccolor3
+st.color4:  ccolor4
+st.color5:  ccolor5
+st.color6:  ccolor6
+st.color7:  ccolor7
+st.color8:  ccolor8
+st.color9:  ccolor9
+st.color10: ccolor10
+st.color11: ccolor11
+st.color12: ccolor12
+st.color13: ccolor13
+st.color14: ccolor14
+st.color15: ccolor15
+st.background: cbackground
+st.foreground: cforeground
+st.opacity: 0.90
+
+!dmenu
+/* dmenu.font : font or font set */
+dmenu.background: cbackground
+dmenu.foreground: #bbbbbb
+dmenu.selbackground: ccolor2
+dmenu.selforeground: #eeeeee
+dmenu.selhighbackground: ccolor2
+dmenu.selhighforeground: ccolor11
+dmenu.normhighbackground: cbackground
+dmenu.normhighforeground: ccolor11
+
+!xmenu
+xmenu.font: mononoki-Regular Nerd Font Complete:size=16,Mononoki Nerd Font:size=18:
+xmenu.background: cbackground
+xmenu.foreground: #bbbbbb
+xmenu.selbackground: cbackground
+xmenu.selforeground: cforeground
+xmenu.separator: #CDC7C2
+xmenu.border: ccolor12
+xmenu.gap: 1
+xmenu.width: 50
+xmenu.height: 25
+xmenu.borderWidth: 2
+xmenu.separatorWidth: 5
+
+!rofi
+rofi.modi: "drun,run,window,ssh"
+rofi.width: 15
+rofi.height: 20
+rofi.lines: 5
+rofi.columns: 1
+rofi.font: mono 14
+rofi.bw: 1
+rofi.location: 1
+rofi.monitor: -5
+rofi.padding: 5
+rofi.yoffset: 30
+rofi.xoffset: 2
+rofi.fixed-num-lines: true
+rofi.show-icons: true
+rofi.terminal: st
+rofi.ssh-client: ssh
+rofi.ssh-command: {terminal} -e {ssh-client} {host} [-p {port}]
+rofi.sort: true
+rofi.sidebar-mode: true
+rofi.fake-transparency: false
+rofi.scrollbar-width: 10
+rofi.show-match: true
+rofi.theme: ~/.config/rofi/themes/gruvbox/gruvbox-dark.rasi

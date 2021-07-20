@@ -1,13 +1,16 @@
 # Folder hooks
 folder-hook 'account.com.gmail.grzegorzpolskapl' 'source ~/.config/mutt/.mutt/account.com.gmail.grzegorzpolskapl'
 folder-hook 'account.pl.o2.grek222' 'source ~/.config/mutt/.mutt/account.pl.o2.grek222'
+folder-hook 'account.pl.edu.pk.student.grzegorz.swistak' 'source ~/.config/mutt/.mutt/account.pl.edu.pk.student.grzegorz.swistak'
 
 # Default account
 source ~/.config/mutt/.mutt/account.pl.o2.grek222
 
 # Macros for switching accounts
-macro index <f3> '<sync-mailbox><enter-command>source ~/.config/mutt/.mutt/account.com.gmail.grzegorzpolskapl<enter><change-folder>!<enter>'
-macro index <f2> '<sync-mailbox><enter-command>source ~/.config/mutt/.mutt/account.pl.o2.grek222<enter><change-folder>!<enter>'
+macro index <f4> '<sync-mailbox><enter-command>source ~/.config/mutt/.mutt/account.com.gmail.gswistakk<enter><change-folder>!<enter>'
+macro index <f3> '<sync-mailbox><enter-command>source ~/.config/mutt/.mutt/account.pl.edu.pk.student.grzegorz.swistak<enter><change-folder>!<enter>'
+macro index <f2> '<sync-mailbox><enter-command>source ~/.config/mutt/.mutt/account.com.gmail.grzegorzpolskapl<enter><change-folder>!<enter>'
+macro index <f1> '<sync-mailbox><enter-command>source ~/.config/mutt/.mutt/account.pl.o2.grek222<enter><change-folder>!<enter>'
 
 #all seen
 macro index A "<tag-pattern>~N<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" 
@@ -44,7 +47,7 @@ set quit
 set thorough_search
 unset confirmappend
 unset move
-set mark_old
+unset mark_old
 set beep_new
 set check_new
 # Pager settings
@@ -76,7 +79,7 @@ auto_view text/html
 #set message_cachedir = "~/.neomutt/cache/bodies"
 #set certificate_file = "~/mail/certs/Certificates.cer"
 #set tmpdir = "~/.neomutt/tmp"
-#set mailcap_path = "~/.config/neomutt/mailcap"
+set mailcap_path = "~/.config/mutt/mailcap"
 
 ###############
 # Message composition settings

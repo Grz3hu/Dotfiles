@@ -1,4 +1,5 @@
 ~/Documents/Projects/Bash/ufetch
+echo -ne '\e[5 q' #beam shaped cursor
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -8,14 +9,15 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 autoload -U colors && colors
-PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+# PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+# PS1="%F{blue}[%~] "
 
 #Load pywal colors
 # (cat ~/.cache/wal/sequences &) && clear
 
 # History in cache directory:
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=100000
+SAVEHIST=100000
 HISTFILE="$HOME/.cache/zsh/history"
 ZSH_AUTOSUGGEST_USE_ASYNC=1
 #One history for terminals
@@ -47,6 +49,7 @@ autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 bindkey '^[l' autosuggest-accept 
 bindkey '^[L' forward-word
+bindkey '^H' backward-kill-word
 # Load aliases and shortcuts if existent.
 [ -f "$HOME/.config/exportrc" ] && source "$HOME/.config/exportrc"
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
@@ -82,6 +85,6 @@ zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "ninrod/pass-zsh-completion"
 zplug "zsh-users/zsh-autosuggestions"
-# zplug "softmoth/zsh-vim-mode"
+zplug "softmoth/zsh-vim-mode"
 zplug romkatv/powerlevel10k, as:theme, depth:1
 zplug load

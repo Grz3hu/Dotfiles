@@ -1,50 +1,27 @@
-find ni
-find beaj
-find St
-find Dow
-find matrix
-search matrix
-search matr
-rename Algebra liniowa
-rename among_trees.jpg
-rename small_memory.jpg
-search deer
-find su
-search small
-search yt
-set show_hidden
-set show_hidden!
-find emoj
-mkdir emoji
-mkdir emoji_script
-shell p
-open_with feh
-rename image.png
-v
-:set show_hidden true
-:show_hidden true
-:show_hidden
-rename mopidy
-wq
-set preview_images true
-set preview_images_method w3m
-rename date
+rename polecenie.png
+mkdir implementacja_kopcowa
+rename implementacja_kolejkowa
+rename implementacja_listowa
+rename main.cpp_old
+j kopco
+j listo
+rename kopcowa.cpp
+rename przykład_kopcowa.png
+rename listowa.cpp
+rename przykład.png
+rename przykład_listowa.png
+search ge
+rename listowa2.jp[g
+rename listowa2.jpg
+rename listowa1.jpg
+rename kopcowa.jpg
+rename ANGIELSKI-C1.pdf
+mikd
+mkdir zadanie_grafy
 bulkrename 
-search ear
-search italy
-unzip
-open_with 
-
-mv nordic.jpg
-shell mv nordicjpg nordic.jpg
-rename init.vim
-
-search pysz
-rename ace.mkv
+j Matem
+rename egzamin
+j aisd
+rename Loki.S01E03.1080p.WEB.H264-EXPLOIT[rarbg]
+rename useme.jpg
 delete
-rename ankieta.pdf
-rename przetwarzanie.pdf
-rename wniosek.pdf
-mkdir Inne
-search Pro
-rename simonstalenhag_0.jpg

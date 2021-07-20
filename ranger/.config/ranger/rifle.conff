@@ -1,0 +1,1 @@
+ext gif, has mpv,      X, flag f = mpv --loop=8 -- "$@"

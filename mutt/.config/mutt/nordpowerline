@@ -65,7 +65,7 @@ color index color8 default "~D"
 color index_flags red default "~D"
 
 color attachment color8 default
-color hdrdefault white color8
+# color hdrdefault white color8
 color search color0 color4
 color progress brightblack cyan
 color signature color14 default
@@ -86,20 +86,20 @@ color attach_headers green default "[0-9\.]+[KM]"
 
 # HIGHLIGHTED
   # Highlight emails from SEEK
-  color index_author color13 default "~f @paczkomaty.pl !~T !~D !~R !~N"
-  color index_subject color13 default "~f @paczkomaty.pl !~T !~D !~R !~N"
-  color index_flags color13 default "~f @paczkomaty.pl !~T !~D !~R !~N"
-  color index_author color13 color0 "~f @paczkomaty.pl !~T !~D !~R ~N"
-  color index_subject color13 color0 "~f @paczkomaty.pl !~T !~D !~R ~N"
-  color index_flags color13 color0 "~f @paczkomaty.pl !~T !~D !~R ~N"
+color index_author color13 default "~f @paczkomaty.pl !~T !~D !~R !~N"
+color index_subject color13 default "~f @paczkomaty.pl !~T !~D !~R !~N"
+color index_flags color13 default "~f @paczkomaty.pl !~T !~D !~R !~N"
+color index_author color13 color0 "~f @paczkomaty.pl !~T !~D !~R ~N"
+color index_subject color13 color0 "~f @paczkomaty.pl !~T !~D !~R ~N"
+color index_flags color13 color0 "~f @paczkomaty.pl !~T !~D !~R ~N"
 
   # Highlight emails from HNews
-  color index_author color202 default "~f @hackernewsletter.com !~T !~D !~R !~N"
-  color index_subject color202 default "~f @hackernewsletter.com !~T !~D !~R !~N"
-  color index_flags color202 default "~f @hackernewsletter.com !~T !~D !~R !~N"
-  color index_author color202 color0 "~f @hackernewsletter.com !~T !~D !~R ~N"
-  color index_subject color202 color0 "~f @hackernewsletter.com !~T !~D !~R ~N"
-  color index_flags color13 color0 "~f @hackernewsletter.com !~T !~D !~R ~N"
+  color index_author color202 default "~f @payu.com !~T !~D !~R !~N"
+  color index_subject color202 default "~f @payu.com !~T !~D !~R !~N"
+  color index_flags color202 default "~f @payu.com !~T !~D !~R !~N"
+  color index_author color202 color0 "~f @payu.com !~T !~D !~R ~N"
+  color index_subject color202 color0 "~f @payu.com !~T !~D !~R ~N"
+  color index_flags color13 color0 "~f @payu.com !~T !~D !~R ~N"
 
   color index_author color202 default "~f @hndigest.com !~T !~D !~R !~N"
   color index_subject color202 default "~f @hndigest.com !~T !~D !~R !~N"
